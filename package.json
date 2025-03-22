@@ -1,0 +1,39 @@
+{
+  "name": "wo-app-exercises",
+  "version": "1.0.0",
+  "description": "Exercise documentation and API for workout applications",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js",
+    "build": "node scripts/md-to-json.js",
+    "validate": "node scripts/validate.js",
+    "dev": "nodemon api/index.js",
+    "compress-images": "node scripts/compress-images.js",
+    "generate-thumbnails": "node scripts/generate-thumbnails.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "workout",
+    "exercise",
+    "fitness",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "glob": "^10.3.10",
+    "js-yaml": "^4.1.0",
+    "marked": "^9.1.6",
+    "sharp": "^0.32.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 

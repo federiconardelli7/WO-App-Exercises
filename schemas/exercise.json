@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Exercise",
+  "description": "Schema for workout exercise data",
+  "type": "object",
+  "required": ["id", "name", "category", "primaryMuscles", "difficulty"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the exercise",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name of the exercise"
+    },
+    "category": {
+      "type": "string",
+      "description": "Primary category of the exercise",
+      "enum": ["upper-body", "lower-body", "core", "cardio", "flexibility"]
+    },
+    "primaryMuscles": {
+      "type": "array",
+      "description": "Primary muscles targeted by the exercise",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "secondaryMuscles": {
+      "type": "array",
+      "description": "Secondary muscles targeted by the exercise",
+      "items": {
+        "type": "string"
+      }
+    },
+    "equipment": {
+      "type": "array",
+      "description": "Equipment needed for the exercise",
+      "items": {
+        "type": "string"
+      }
+    },
+    "difficulty": {
+      "type": "string",
+      "description": "Difficulty level of the exercise",
+      "enum": ["beginner", "intermediate", "advanced"]
+    },
+    "tags": {
+      "type": "array",
+      "description": "Tags associated with the exercise",
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the exercise"
+    },
+    "instructions": {
+      "type": "array",
+      "description": "Step-by-step instructions for performing the exercise",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tips": {
+      "type": "array",
+      "description": "Tips for proper form and execution",
+      "items": {
+        "type": "string"
+      }
+    },
+    "variations": {
+      "type": "array",
+      "description": "Variations of the exercise",
+      "items": {
+        "type": "string"
+      }
+    },
+    "images": {
+      "type": "array",
+      "description": "Paths to images demonstrating the exercise",
+      "items": {
+        "type": "string"
+      }
+    },
+    "videos": {
+      "type": "array",
+      "description": "Paths to videos demonstrating the exercise",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+} 
